@@ -41,7 +41,7 @@ function addBook(event){
 }
 
 function deleteBook(event){
-    if(event.target.textContent === 'X'){
+    if(event.target.textContent === 'x'){
         if(confirm('Are you sure you want to delete this book?')){
             event.target.parentElement.parentElement.remove();
             let bookISBN = event.target.parentElement.previousElementSibling.textContent;
