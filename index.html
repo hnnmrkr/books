@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style>
+    body{
+        padding: 20px;
+    }
+
+    form{
+        padding: 40px;
+    }
+
+    .card {
+        width: 40rem;
+    }
+
+    .btn {
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+        width: 200px;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div class="card">
+        <div class="card-title text-center" style="font-weight: bold; font-size: 24pt; text-align: center; color: black;">ADD BOOK</div>
+        <div class="card-body">
+            <!--FORM STARTS HERE-->
+            <form id="add-books">
+                <div class="form-group">
+                    <label for="book-title" style="font-weight: bold; font-size: 12pt;color: black">Book Title</label>
+                    <br>
+                    <input type="text" class="form-control" id="book-title" style="width: 500px; border: 1px lightgrey solid; border-radius: 5px;">
+                </div>
+
+                <div class="form-group">
+                    <label for="author" style="font-weight: bold; font-size: 12pt;color: black">Author</label>
+                    <br>
+                    <input type="text" class="form-control" id="author" style="width: 500px; border: 1px lightgrey solid; border-radius: 5px;">
+                </div>
+
+                <div class="form-group">
+                    <label for="isbn" style="font-weight: bold; font-size: 12pt;color: black">ISBN#</label>
+                    <br>
+                    <input type="text" class="form-control" id="isbn" style="width: 500px; border: 1px lightgrey solid; border-radius: 5px;">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--TABLE-->
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">ISBN</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Tõde ja Õigus</td>
+            <td>A.H Tammsaare</td>
+            <td>23456</td>
+            <td><a href="#">x</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
