@@ -3,6 +3,7 @@ const booksList = document.querySelector('#books-list');
 
 
 form.addEventListener('submit', addBook);
+booksList.addEventListener('click', deleteBook)
 
 function addBook(event){
     // Get input values
@@ -38,3 +39,13 @@ function addBook(event){
     isbnInput.value = '';
     event.preventDefault();
 }
+
+function deleteBook(event){
+    if(event.target.textContent === 'X'){
+        if(confirm('Are you sure you want to delete this book?')){
+            event.target.parentElement.parentElement.remove();
+            let bookISBN = event.target.parentElement.previousElementSibling.textContent;
+        }
+    }
+}
+
