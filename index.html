@@ -54,28 +54,23 @@
                     <br>
                     <input type="text" class="form-control" id="isbn" style="width: 500px; border: 1px lightgrey solid; border-radius: 5px;">
                 </div>
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" value="Add Book" class="btn">Submit</button>
             </form>
         </div>
     </div>
 
     <!--TABLE-->
+    <h4>Books</h4>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">ISBN</th>
-            <th scope="col"></th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th></th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td>Tõde ja Õigus</td>
-            <td>A.H Tammsaare</td>
-            <td>23456</td>
-            <td><a href="#">x</a></td>
-        </tr>
+        <tbody id="books-list">
         </tbody>
     </table>
 
