@@ -29,7 +29,7 @@ function addBook(event){
     td = document.createElement('td');
     const link = document.createElement('a');
     link.setAttribute('href', '#');
-    link.appendChild(document.createTextNode('X'));
+    link.appendChild(document.createTextNode('x'));
     td.appendChild(link);
     tr.appendChild(td);
     booksList.appendChild(tr);
