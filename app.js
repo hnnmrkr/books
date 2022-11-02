@@ -1,9 +1,12 @@
 const form = document.querySelector('form');
 const booksList = document.querySelector('#books-list');
+const deleteBooks = document.querySelector('#delete-books')
 
 
 form.addEventListener('submit', addBook);
 booksList.addEventListener('click', deleteBook)
+deleteBooks.addEventListener('click',deleteAllBooks)
+
 
 function addBook(event){
     // Get input values
@@ -48,4 +51,13 @@ function deleteBook(event){
         }
     }
 }
+
+// Delete all books
+function deleteAllBooks(event){
+    while (booksList.firstChild){
+        booksList.removeChild(booksList.firstChild)
+    }
+}
+
+
 
