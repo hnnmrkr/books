@@ -41,6 +41,9 @@ function addBook(event){
     authorInput.value = '';
     isbnInput.value = '';
     event.preventDefault();
+
+    addBookToLS(book);
+
 }
 
 function deleteBook(event){
@@ -48,6 +51,7 @@ function deleteBook(event){
         if(confirm('Are you sure you want to delete this book?')){
             event.target.parentElement.parentElement.remove();
             let bookISBN = event.target.parentElement.previousElementSibling.textContent;
+            deleteBookFromLS(book);
         }
     }
 }
@@ -58,6 +62,39 @@ function deleteAllBooks(event){
         booksList.removeChild(booksList.firstChild)
     }
 }
+
+// Add Books to Local Storage
+function addBookToLS(book) {
+    let books
+    if(localStorage.getItem('books') === null) {
+        books = []
+    } else {
+        books = JSON.parse(localStorage.getItem('books'))
+    }
+    books.push(book)
+    localStorage.setItem('books', JSON.stringify(books))
+}
+
+//Delete books from Local Storage
+function deleteBookFromLS(book) {
+    let books
+    if(localStorage.getItem(`books`) === null) {
+        books = []
+    } else {
+        books = JSON.parse(localStorage.getItem(`books`))
+        console.log(typeof books)
+
+    }
+    console.log(books)
+    books.forEach((bookFromLS, index) => {
+        console.log(JSON.stringify(bookFromLS) === JSON.stringify(boook))
+        if(JSON.stringify(bookFromLS) === JSON.stringify(boook)) {
+            books.splice(index, 1)
+        }
+    })
+    localStorage.setItem('books', JSON.stringify(books))
+}
+
 
 
 
